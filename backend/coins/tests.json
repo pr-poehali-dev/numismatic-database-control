@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "name": "Получить все монеты",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"coins": []},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Поиск по названию",
+      "method": "GET",
+      "path": "/?search=рубль",
+      "expectedStatus": 200,
+      "expectedBody": {"coins": []},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Фильтр по металлу",
+      "method": "GET",
+      "path": "/?metal=Серебро",
+      "expectedStatus": 200,
+      "expectedBody": {"coins": []},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
